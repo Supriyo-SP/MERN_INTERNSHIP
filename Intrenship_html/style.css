@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    background-color: rgb(179, 212, 240);
+}
+#one{
+     height: 100vh;
+    width: 25vw;
+}
+#two{
+     height: 100vh;
+    width: 50vw;
+    background-color: rgb(205, 121, 121);
+
+}
+#heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+       margin: auto;
+       height: 6vh;
+       width: 50vw;
+       background-color: rgb(238, 238, 221);     
+}
+#h2 {
+    background-color: rgb(237, 135, 135);
+}
+#body1{
+    background-color: cornsilk;
+    
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(196, 196, 196);
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: rgb(238, 224, 224);
+            width: fit-content;
+            height: 100vh;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        }
+
+        /* navbar */
+        nav {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(255, 209, 152);
+            height: auto;
+            width: 800px;
+            justify-content: space-between;
+            align-items: center;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+
+        nav .left {
+            font-size: 24px;
+            font-weight: 600;
+            padding: 10px;
+
+
+
+        }
+
+        nav .left span {
+            margin: 0px 5px 0px 5px;
+            padding: 5px 10px;
+
+        }
+
+        nav .right {
+            font-size: 20px;
+            padding: 5px 15px;
+
+        }
+
+        nav .right span {
+            margin: 0px 15px 0px 5px;
+            padding: 5px 15px;
+            font-size: 20px;
+            font-weight: 500;
+
+        }
+
+        nav .right button {
+            font-size: 20px;
+            padding: 5px 10px;
+           
+            border: 1.5px solid rgb(219, 193, 193);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <nav>
+            <div class="left">
+                <span>Home</span>
+                <span>About</span>
+                <span>Services</span>
+            </div>
+            <div class="right">
+                <span>Contact</span>
+                <button>login</button>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

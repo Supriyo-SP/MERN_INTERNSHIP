@@ -1,0 +1,101 @@
+:root{
+    --text-color :#1a1c20;
+    --link-color :#4878fd;
+    --background-color:rgb(254, 249, 210);
+}
+ *{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+
+ }
+ html{
+    scroll-behavior: smooth;
+ }
+ body {
+    font-family: 'Poppins';
+    background-color: var(--background-color);
+ }
+
+ a {
+    color: var(--link-color);
+    text-decoration:none;
+    
+ }
+ /* navbar */
+ nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    align-items: center;
+
+ }
+ nav .left .f{
+    font-size: 24px;
+    font-weight: 600;
+
+ }
+ nav .left .f2{
+    font-size: 16px;
+    font-weight: 400;
+    color: gray;
+ }
+ nav .right a{
+    margin: 0px 15px 0px 5px;
+    padding: 5px 15px;
+    border: .5px solid black;
+    border-radius: 20px;
+    background-color: rgba(255, 165, 20, 0.4);
+ }
+ /* section1 */
+ .hero_section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 50px 25px;
+    gap: 40px;
+ }
+ .hero_section .text .link{
+    margin: 40px;
+    gap: 20px;
+ }
+ .hero_section .text .link a{
+   
+    padding:5px 10px;
+    border: 2px solid var(--link-color);
+    border-radius: 5px;
+    margin-right: 10px;
+    gap: 20px;
+    
+ }
+ .hero_section .text .link a:hover{
+    color: var(--text-color);
+    border:2px solid var(--text-color)
+
+ }
+ /* SECTION_2 */
+ .skill_section{
+    padding: 0 10px;
+ }
+ .skill_section h2{
+    text-align: center;
+    margin-bottom: 20px;
+ }
+ .skill_section .cells {
+    display: flex;
+    justify-content: center;
+ }
+ .skill_section .cells .cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 25px;
+    margin-right: 30px;
+    border: 1.5px solid rgba(180, 180, 180, 0.8);
+ }
+ .skill_section .cells .cell img{
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+ }
