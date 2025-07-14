@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: poppins, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    background: #3a61b4;
+    background: linear-gradient(90deg, rgba(58, 97, 180, 1) 0%, rgba(253, 29, 29, 1) 37%, rgba(252, 176, 69, 1) 100%);
+
+}
+
+.logo img {
+    width: 350px;
+    height: 200px;
+
+}
+
+.logo h1 {
+    color: white;
+    font-size: 40px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.admissioncard {
+    background-color: #ffa6a6;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    width: 250px;
+    height: 50px;
+
+}
+
+.admissioncard i {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    margin-right: 10px;
+    ;
+}
+
+.admissioncard p {
+    color: rgb(71, 71, 71);
+    font-size: 20px;
+    margin-left: 40px;
+}
+
+.navbar1 {
+    background: #0a1200;
+    background: linear-gradient(90deg, rgba(10, 18, 0, 1) 0%, rgba(15, 150, 71, 1) 57%, rgba(224, 213, 110, 1) 100%);
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar1 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar1 li {
+    float: left;
+}
+
+.navbar1 li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar1 li a:hover {
+    background-color: #b2e9ff;
+}
+
+.navbar1 li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.navbar1 li a:hover,
+.navbar1 li a.active {
+    background-color: #3c6b7e;
+    color: white;
+}
+
+.banner img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+.heading1{
+    display:flex;
+    justify-content: center;
+    margin: 40px;
+}
+#coloradd{
+    color: chocolate;
+    padding-left: 10px;
+}
+/* departments */
+.department{
+    display: grid;
+    margin-left: 240px;
+   grid-template-columns: 400px 400px 400px;
+}
+.dept{
+    height: 400px;
+    width: 300px;
+}
+.dept img{
+    height: 250px;
+    width: 250px;
+}
+
+.header2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    margin-top: 20px;
+}
+/* recuritment */
+.recruitment-grid {
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px 250px;
+    gap: 20px;
+    padding: 20px;
+    margin-left: 90px;
+}
+.cell{
+    background-color: rgb(225, 225, 225);
+    border: 10px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cell img{
+    width:fit-content;
+    height: fit-content;
+}
