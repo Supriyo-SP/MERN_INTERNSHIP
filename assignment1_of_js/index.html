@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Color Sections</title>
+    <style>
+        body {
+            transition: background-color 0.3s;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        .main-div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            gap: 20px;
+        }
+        .section {
+            width: 120px;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .section:hover {
+            transform: scale(1.05);
+            opacity: 0.85;
+        }
+        .red { background: #e74c3c; }
+        .green { background: #27ae60; }
+        .blue { background: #2980b9; }
+        .yellow { background: #f1c40f; color: #333; }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <div class="section red" data-color="#e74c3c">Red</div>
+        <div class="section green" data-color="#27ae60">Green</div>
+        <div class="section blue" data-color="#2980b9">Blue</div>
+        <div class="section yellow" data-color="#f1c40f">Yellow</div>
+    </div>
+    <script>
+        document.querySelectorAll('.section').forEach(section => {
+            section.addEventListener('click', function() {
+                document.body.style.backgroundColor = this.getAttribute('data-color');
+            });
+        });
+    </script>
+</body>
+</html>
