@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Picture & Color Display</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            background: linear-gradient(120deg, #f5f5f5 60%, #e0e7ff 100%);
+        }
+        .main-container {
+            display: flex;
+            flex: 1;
+            box-shadow: 0 8px 32px rgba(60,60,120,0.08);
+            border-radius: 24px;
+            margin: 32px auto;
+            background: #fff;
+            max-width: 1100px;
+            min-width: 800px;
+        }
+        .left-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 48px 32px 48px 48px;
+        }
+        .pictures {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+        }
+        .pictures img {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            cursor: pointer;
+            border: 3px solid transparent;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+            
+        }
+        .pictures img.selected {
+            border: 3px solid #6366f1;
+            
+        }
+        .colors {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-top: 48px;
+            justify-content: flex;
+        }
+        .color-box {
+            width: 50px;
+            height: 50px;
+            border-radius: 20px;
+            cursor: pointer;
+            border: 3px solid #d2d3d5;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .color-box.selected {
+            border: 3px solid #6366f1;
+            
+        }
+        .display-section {
+            width: 400px;
+            min-width: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            border-left: 3px solid #e5e7eb;
+            border-top-right-radius: 24px;
+            border-bottom-right-radius: 24px;
+            box-shadow: 0 2px 16px rgba(99,102,241,0.06);
+        }
+        .display-img {
+            max-width: 85%;
+            max-height: 85%;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(60,60,120,0.10);
+            border: 2px solid #e5e7eb;
+            background: #fff;
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="left-section">
+            <div class="pictures">
+                <img src="/javascript/assignment2_of_js/images/happyemj.jpeg" alt="Pic 1" data-index="0">
+                <img src="/javascript/assignment2_of_js/images/laughing.jpeg" alt="Pic 2" data-index="1">
+                <img src="/javascript/assignment2_of_js/images/download.jpeg" alt="Pic 3" data-index="2">
+                <img src="/javascript/assignment2_of_js/images/sademj.jpeg" alt="Pic 4" data-index="3">
+            </div>
+           </div>
+        </div>
+        <div class="display-section" id="displaySection">
+            <img src="/javascript/assignment2_of_js/images/happyemj.jpeg" alt="" class="display-img" id="displayImg">
+        </div>
+    </div>     <div class="colors">
+                <div class="color-box" style="background: #e63636;" data-color="#e63636"></div>
+                <div class="color-box" style="background: #3098ff;" data-color="#3098ff"></div>
+                <div class="color-box" style="background: #54ff54;" data-color="#54ff54"></div>
+                <div class="color-box" style="background: #f9f630;" data-color="#f9f630"></div>
+        
+    <script>
+       
+        const pictures = document.querySelectorAll('.pictures img');
+        const displayImg = document.getElementById('displayImg');
+        pictures.forEach(img => {
+            img.addEventListener('click', function() {
+                pictures.forEach(i => i.classList.remove('selected'));
+                this.classList.add('selected');
+                displayImg.src = this.src;
+                
+            });
+        });
+        //default select
+        pictures[0].classList.add('selected');
+
+        const colors = document.querySelectorAll('.color-box');
+        const displaySection = document.getElementById('displaySection');
+        colors.forEach(box => {
+            box.addEventListener('click', function() {
+                colors.forEach(c => c.classList.remove('selected'));
+                this.classList.add('selected');
+                displaySection.style.background = this.dataset.color;
+            });
+        });
+    </script>
+</body>
+</html>
